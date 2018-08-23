@@ -10,7 +10,6 @@
 }
 
 .chat__message {
-    background-color: #e0e0e0;
     margin: 1ex;
     padding: 1ex;
     border-radius: 2px;
@@ -18,8 +17,10 @@
 
 .chat__message--from-me {
     align-self: flex-end;
+    background-color: #fff;
 }
 
 .chat__message--from-her {
     align-self: flex-start;
+    background-color: #e0e0e0;
 }
