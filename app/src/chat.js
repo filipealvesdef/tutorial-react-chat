@@ -71,7 +71,10 @@ class Chat extends React.Component {
                     value={this.state.userInput}
                     onChange={this.handleTextareaChange}
                 />
-                <button onClick={this.handleSendClick}>Send</button>
+                <button
+                    onClick={this.handleSendClick}
+                    disabled={!this.state.userInput}
+                >Send</button>
             </div>
         </div>;
     }
