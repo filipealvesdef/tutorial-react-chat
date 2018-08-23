@@ -17,6 +17,7 @@
     margin: 1ex;
     padding: 1ex;
     border-radius: 2px;
+    white-space: pre-wrap;
 }
 
 .chat__message--from-me {
