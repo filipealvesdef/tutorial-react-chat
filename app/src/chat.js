@@ -22,6 +22,10 @@ class ChatMessage extends React.Component {
 }
 
 class Chat extends React.Component {
+    state = {
+        userInput: '',
+    };
+
     render() {
         return <div className='chat'>
             <div className='chat__log'>
@@ -54,7 +58,8 @@ class Chat extends React.Component {
                 </ChatMessage>
             </div>
             <div className='chat__input'>
-                <textarea rows={4} /><button>Send</button>
+                <textarea rows={4} value={this.state.userInput}/>
+                <button>Send</button>
             </div>
         </div>;
     }
