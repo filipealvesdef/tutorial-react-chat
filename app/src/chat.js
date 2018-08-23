@@ -30,6 +30,10 @@ class Chat extends React.Component {
         this.setState({userInput: e.target.value});
     }
 
+    handleSendClick = (e) => {
+        console.log('Need to send message: ' + this.state.userInput);
+    }
+
     render() {
         return <div className='chat'>
             <div className='chat__log'>
@@ -67,7 +71,7 @@ class Chat extends React.Component {
                     value={this.state.userInput}
                     onChange={this.handleTextareaChange}
                 />
-                <button>Send</button>
+                <button onClick={this.handleSendClick}>Send</button>
             </div>
         </div>;
     }
