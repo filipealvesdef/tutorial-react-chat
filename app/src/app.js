@@ -8,13 +8,11 @@ class App extends Component {
         console.log('Need to send message: ' + userInput);
     }
 
-  render() {
-    return (
-      <div className="App">
-          <Chat onSend={this.handleSend}/>
-      </div>
-    );
-  }
+    render() {
+        return <div className="App">
+            <Chat onSend={this.handleSend}/>
+        </div>;
+    }
 }
 
 export default App;
