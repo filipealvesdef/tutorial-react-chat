@@ -10,7 +10,13 @@ class App extends Component {
     };
 
     handleSend = (userInput) => {
-        console.log('Need to send message: ' + userInput);
+        const msg = {
+            from: 'me',
+            text: userInput,
+        };
+        const messages = this.state.messages.slice();
+        messages.push(msg);
+        this.setState({messages: messages});
     }
 
     render() {
