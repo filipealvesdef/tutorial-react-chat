@@ -48,6 +48,7 @@ class Chat extends React.Component {
                 </ChatMessage>
             </div>
             <div className='chat__input'>
+                <textarea rows={4} /><button>Send</button>
             </div>
         </div>;
     }
