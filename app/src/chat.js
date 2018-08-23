@@ -22,6 +22,10 @@ class ChatMessage extends React.Component {
 }
 
 class Chat extends React.Component {
+    static defaultProps = {
+        onSend: () => {}
+    };
+
     state = {
         userInput: '',
     };
@@ -31,7 +35,8 @@ class Chat extends React.Component {
     }
 
     handleSendClick = (e) => {
-        console.log('Need to send message: ' + this.state.userInput);
+        this.props.onSend(this.state.userInput);
+        this.setState({userInput: ''});
     }
 
     render() {
