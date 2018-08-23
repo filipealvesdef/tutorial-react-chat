@@ -4,6 +4,8 @@ import './app.css';
 import Chat from './chat';
 import { ChatMessage } from './chat';
 
+import fortunes from './fortunes';
+
 class App extends Component {
     state = {
         messages: [],
@@ -16,6 +18,11 @@ class App extends Component {
         };
         const messages = this.state.messages.slice();
         messages.push(msg);
+        const answer = {
+            from: 'her',
+            text: fortunes[Math.floor(fortunes.length * Math.random())],
+        };
+        messages.push(answer);
         this.setState({messages: messages});
     }
 
