@@ -59,7 +59,11 @@ function Chat() {
             rows={4}
             value={userInput}
             onChange={e => {setUserInput(e.target.value);}}
-        /><button onClick={send}>Send</button>
+        />
+        <button
+            onClick={send}
+            disabled={!userInput}
+        >Send</button>
       </div>
     </div>;
 }
