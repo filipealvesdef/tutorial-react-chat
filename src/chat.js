@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './chat.css';
 
@@ -21,6 +21,8 @@ ChatMessage.defaultProps = {
 };
 
 function Chat() {
+    const [userInput, setUserInput] = useState('');
+
     return <div className='chat'>
       <div className='chat__log'>
         <ChatMessage fromMe>
@@ -49,7 +51,7 @@ function Chat() {
         </ChatMessage>
       </div>
       <div className='chat__input'>
-        <textarea rows={4} /><button>Send</button>
+        <textarea rows={4} value={userInput} /><button>Send</button>
       </div>
     </div>;
 }
