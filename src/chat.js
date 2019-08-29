@@ -23,6 +23,10 @@ ChatMessage.defaultProps = {
 function Chat() {
     const [userInput, setUserInput] = useState('');
 
+    function send() {
+        console.log('Need to send the following message: ' + userInput);
+    }
+
     return <div className='chat'>
       <div className='chat__log'>
         <ChatMessage fromMe>
@@ -55,7 +59,7 @@ function Chat() {
             rows={4}
             value={userInput}
             onChange={e => {setUserInput(e.target.value);}}
-        /><button>Send</button>
+        /><button onClick={send}>Send</button>
       </div>
     </div>;
 }
