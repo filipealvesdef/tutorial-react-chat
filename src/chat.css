@@ -1,4 +1,6 @@
 .chat {
+    display: flex;
+    flex-direction: column;
     width: 50em;
     height: 50em;
     background-color: #f5f5f5;
@@ -7,6 +9,8 @@
 .chat__log {
     display: flex;
     flex-direction: column;
+    flex: 1 1;
+    overflow: auto;
 }
 
 .chat__message {
@@ -28,6 +32,7 @@
 .chat__input {
     display: flex;
     padding: 1ex;
+    flex: none;
 }
 
 .chat__input textarea {
