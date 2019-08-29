@@ -44,6 +44,9 @@ function Chat() {
         <ChatMessage fromMe>
            Integer consequat efficitur pretium. Donec cursus, nisl et feugiat vehicula, lorem neque fringilla augue, quis scelerisque sapien neque scelerisque magna. Aliquam facilisis, turpis gravida luctus gravida, ipsum ex rutrum massa, quis scelerisque elit metus id lorem. Integer in aliquam est. In ultrices neque mauris, eu tristique sem eleifend commodo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In ac aliquam erat. Sed faucibus turpis eget elit facilisis ornare. Vestibulum sem magna, pulvinar sit amet magna id, ultrices convallis nulla. Duis lorem urna, varius in fringilla et, aliquam et lorem. In et feugiat urna. Mauris venenatis consectetur eros at efficitur. Nullam ut faucibus erat. Cras congue a arcu a blandit.
         </ChatMessage>
+        <ChatMessage fromMe>
+           Integer consequat efficitur pretium. Donec cursus, nisl et feugiat vehicula, lorem neque fringilla augue, quis scelerisque sapien neque scelerisque magna. Aliquam facilisis, turpis gravida luctus gravida, ipsum ex rutrum massa, quis scelerisque elit metus id lorem. Integer in aliquam est. In ultrices neque mauris, eu tristique sem eleifend commodo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In ac aliquam erat. Sed faucibus turpis eget elit facilisis ornare. Vestibulum sem magna, pulvinar sit amet magna id, ultrices convallis nulla. Duis lorem urna, varius in fringilla et, aliquam et lorem. In et feugiat urna. Mauris venenatis consectetur eros at efficitur. Nullam ut faucibus erat. Cras congue a arcu a blandit.
+        </ChatMessage>
       </div>
       <div className='chat__input'>
         <textarea rows={4} /><button>Send</button>
