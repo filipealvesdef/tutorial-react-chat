@@ -51,7 +51,11 @@ function Chat() {
         </ChatMessage>
       </div>
       <div className='chat__input'>
-        <textarea rows={4} value={userInput} /><button>Send</button>
+        <textarea
+            rows={4}
+            value={userInput}
+            onChange={e => {setUserInput(e.target.value);}}
+        /><button>Send</button>
       </div>
     </div>;
 }
