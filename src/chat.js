@@ -24,7 +24,8 @@ function Chat(props) {
     const [userInput, setUserInput] = useState('');
 
     function send() {
-        console.log('Need to send the following message: ' + userInput);
+        setUserInput('')
+        props.onSend(userInput)
     }
 
     return <div className='chat'>
@@ -44,5 +45,9 @@ function Chat(props) {
       </div>
     </div>;
 }
+
+Chat.defaultProps = {
+    onSend: () => {}
+};
 
 export { Chat, ChatMessage };

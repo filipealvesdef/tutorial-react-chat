@@ -5,30 +5,13 @@ import { Chat, ChatMessage } from './chat.js';
 import './app.css';
 
 function App() {
-    const [messages, setMessages] = useState([
-        {
-            from: 'me',
-            text: 'Hi.',
-        },
-        {
-            from: 'her',
-            text: 'Hello.',
-        },
-        {
-            from: 'me',
-            text: 'How are you?',
-        },
-        {
-            from: 'her',
-            text: 'I\'m good. How about you?',
-        },
-        {
-            from: 'me',
-            text: 'I\'m fine.',
-        },
-    ]);
+    const [messages, setMessages] = useState([]);
 
-    return <Chat>
+    function onSend(userInput) {
+        console.log('Need to send the following message: ' + userInput);
+    }
+
+    return <Chat onSend={onSend}>
         {messages.map((m, i) => <ChatMessage
             key={i}
             fromMe={m.from === 'me'}
