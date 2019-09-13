@@ -9,7 +9,7 @@ function App(props) {
 
     function onSend(userInput) {
         const msg = {from: 'me', text: userInput}
-        setMessages(messages.concat([msg]));
+        setMessages(l => l.concat([msg]));
 
         props.agent.sendMessage(userInput).then(response => {
             if (!response) {
@@ -21,7 +21,7 @@ function App(props) {
                 text,
             }));
 
-            setMessages(messages.concat(msgs))
+            setMessages(l => l.concat(msgs))
         })
     }
 
