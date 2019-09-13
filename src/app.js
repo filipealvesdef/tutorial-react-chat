@@ -8,7 +8,8 @@ function App() {
     const [messages, setMessages] = useState([]);
 
     function onSend(userInput) {
-        console.log('Need to send the following message: ' + userInput);
+        const msg = {from: 'me', text: userInput}
+        setMessages(messages.concat([msg]));
     }
 
     return <Chat onSend={onSend}>
