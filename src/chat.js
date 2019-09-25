@@ -28,6 +28,13 @@ function Chat(props) {
         props.onSend(userInput)
     }
 
+    function handleKeyDown(e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            send();
+            e.preventDefault();
+        }
+    }
+
     return <div className='chat'>
       <div className='chat__log'>
         {props.children}
@@ -37,6 +44,7 @@ function Chat(props) {
             rows={4}
             value={userInput}
             onChange={e => {setUserInput(e.target.value);}}
+            onKeyDown={handleKeyDown}
         />
         <button
             onClick={send}
