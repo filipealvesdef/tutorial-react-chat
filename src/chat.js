@@ -11,7 +11,7 @@ function ChatMessage(props) {
         className += ' chat__message--from-her';
     }
 
-    return <div className={className}>
+    return <div className={className} ref={e => e && e.scrollIntoView()}>
       {props.children}
     </div>;
 }
